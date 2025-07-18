@@ -1,0 +1,133 @@
+@import "../../vars.css";
+
+.footercont {
+    width: 100%;
+    padding: 25px;
+    margin-top: 60px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.contactustext {
+    width: 55%;
+}
+
+.contactheader {
+    font-size: 26px;
+    font-weight: 900;
+    font-family: var(--font-roboto);
+    text-align: center;
+}
+
+.contacttext {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-roboto);
+    text-align: center;
+}
+
+.contactussocial {
+    width: 30%;
+}
+
+.socialcont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.socialimg {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.socialtext {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.formcont {
+    width: 50%;
+    padding: 25px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-white);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 25px auto 50px auto;
+}
+
+.formheader {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-white);
+    text-align: center;
+    text-shadow: 0 0 10px var(--color-white);
+}
+
+.inputlable {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-white);
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.inputbox {
+    padding: 7.5px;
+    margin-top: 5px;
+    border: 1.5px solid var(--color-primary);
+    border-radius: 5px;
+    outline: none;
+}
+
+.btn {
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1.5px solid var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 900px) {
+    .formcont {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contactustext {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+
+    .contactussocial {
+        width: 100%;
+    }
+}

@@ -1,0 +1,111 @@
+@import "../../vars.css";
+
+.projectcont {
+    width: 90%;
+    padding: 10px;
+    justify-self: center;
+    margin-bottom: 25px;
+}
+
+.projectdiv {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.projectbox {
+    padding: 15px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-white);
+}
+
+.projectimg {
+    width: 100%;
+    height: 30%;
+    border-radius: 10px;
+}
+
+.headertext {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 25px;
+}
+
+.projectdesc {
+    margin-top: 10px;
+}
+
+.projectdesctext {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-white);
+}
+
+.projectname {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.skillcont {
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.skillbox {
+    padding: 2.5px;
+    border-radius: 5px;
+    background-color: var(--color-bg);
+}
+
+.skilltext {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.btn {
+    padding: 7.5px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    border-color: var(--color-white);
+    background: transparent;
+    border: 2px solid;
+    text-shadow: 0 0 10px currentColor;
+    box-shadow: 
+        inset 0 0 20px var(--color-primary),
+        0 0 20px currentColor;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .projectdiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projectdiv {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+

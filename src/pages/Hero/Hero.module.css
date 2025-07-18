@@ -1,0 +1,82 @@
+@import "../../vars.css";
+
+.introcont {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 80px;
+    margin-top: 80px;
+}
+
+.textcont {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.circle {
+    width: 250px !important;
+    height: 250px !important;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    animation-name: shape;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.heroimg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@keyframes shape {
+
+    0%,
+    100% {
+        border-radius: 7.5%;
+    }
+
+    50% {
+        border-radius: 50%;
+    }
+}
+
+.textname {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--color-white);
+}
+
+.textintro {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 830px) {
+    .introcont {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .textcont {
+        width: 112.5%;
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .circle {
+        width: 150px !important;
+        height: 150px !important;
+        margin-left: 0;
+    }
+}

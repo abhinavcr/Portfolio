@@ -1,0 +1,139 @@
+@import "../../vars.css";
+
+.experienceCont {
+    width: 90%;
+    padding: 10;
+    justify-self: center;
+    margin-bottom: 25px;
+}
+
+.headertext {
+    font-size: 16;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 25px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skilliconcont {
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.companycont {
+    width: 52.5%;
+}
+
+.companybox {
+    padding: 20px;
+    background-image: linear-gradient(90deg,
+            var(--color-secondary),
+            var(--color-bg));
+    border-radius: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.companydes {
+    width: 80%;
+    margin-left: 20px;
+}
+
+.skillbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.skillcircle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.skillimg {
+    width: 75px;
+    height: 75px;
+}
+
+.skilltext {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--color-white);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.companyimg {
+    width: 50px;
+    height: 50px;
+}
+
+.companyname {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-white);
+}
+
+.companyduration {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-gray);
+}
+
+.workdesc {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skilliconcont {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .companycont {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .skilliconcont {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skilliconcont {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .companycont {
+        width: 100%;
+    }
+}
