@@ -7,6 +7,19 @@
     margin-bottom: 25px;
 }
 
+.slideinleft {
+    animation: slideInLeft 2s ease-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .projectdiv {
     width: 100%;
     display: grid;

@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./Project.module.css";
 import { Images } from "../../common/Images";
 
 function Project() {
+  const projectRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (projectRef.current) {
+      observer.observe(projectRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const projectData = [
     {
       id: 1,
@@ -31,7 +54,7 @@ function Project() {
   ];
 
   return (
-    <div id="project" className={styles.projectcont}>
+    <div id="project" ref={projectRef} className={`${styles.projectcont} ${isVisible && styles.slideinleft}`}>
       <h2 className={styles.headertext}>PROJECTS</h2>
       <div className={styles.projectdiv}>
         {projectData.map((item) => {

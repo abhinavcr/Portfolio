@@ -7,6 +7,20 @@
     margin-bottom: 25px;
 }
 
+.slideinright {
+    animation: slideInRight 2s ease-out;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .headertext {
     font-size: 16;
     font-weight: 800;

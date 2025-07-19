@@ -1,8 +1,31 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./Experience.module.css";
 import { Images } from "../../common/Images";
 
 function Experience() {
+  const experienceRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (experienceRef.current) {
+      observer.observe(experienceRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const companyData = [
     {
       id: 1,
@@ -16,7 +39,7 @@ function Experience() {
         "Implemented Redux for robust and scalable state management, ensuring consistent and responsive user experiences.",
         "Utilized third-party libraries and services including Firebase, Google Maps, and Language Translation to enhance application functionality.",
       ],
-    }
+    },
   ];
 
   const skillData = [
@@ -28,11 +51,12 @@ function Experience() {
     { id: 6, skillname: "MongoDB", skillimg: Images.mongodblogo },
   ];
 
-  const width = window.innerWidth
-  console.log(width)
-
   return (
-    <div id="experience" className={styles.experienceCont}>
+    <div
+      id="experience"
+      ref={experienceRef}
+      className={`${styles.experienceCont} ${isVisible && styles.slideinright}`}
+    >
       <h2 className={styles.headertext}>EXPERIENCE</h2>
       <div className={styles.row}>
         <div className={styles.skilliconcont}>

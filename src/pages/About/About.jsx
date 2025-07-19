@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styles from "./About.module.css";
 import { Images } from "../../common/Images";
 
 function About() {
+  const aboutRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div id="about" className={styles.aboutcont}>
+    <div id="about" ref={aboutRef} className={`${styles.aboutcont} ${isVisible && styles.slideinleft}`}>
       <h2 className={styles.headertext}>ABOUT</h2>
       <div className={styles.row}>
         <img
@@ -36,7 +59,8 @@ function About() {
             <div className={styles.skilltextcont}>
               <h1 className={styles.skillheadertext}>Backend Developer</h1>
               <h2 className={styles.skilltext}>
-              I have experience developing fast and optimised back-end systems and APIs
+                I have experience developing fast and optimised back-end systems
+                and APIs
               </h2>
             </div>
           </div>
@@ -49,7 +73,8 @@ function About() {
             <div className={styles.skilltextcont}>
               <h1 className={styles.skillheadertext}>UI Designer</h1>
               <h2 className={styles.skilltext}>
-              I have designed multiple landing pages and have created design systems as well
+                I have designed multiple landing pages and have created design
+                systems as well
               </h2>
             </div>
           </div>

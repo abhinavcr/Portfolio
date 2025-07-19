@@ -10,6 +10,20 @@
     margin-bottom: 50px;
 }
 
+.slideinleft {
+    animation: slideInLeft 2s ease-out;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 .headertext {
     font-size: 24px;
     font-weight: 800;
@@ -31,7 +45,7 @@
 .skillcont {
     width: 65%;
     height: 30%;
-   margin: auto;
+    margin: auto;
 }
 
 .skillbox {
