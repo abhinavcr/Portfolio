@@ -28,7 +28,7 @@ function About() {
 
   return (
     <div id="about" ref={aboutRef} className={`${styles.aboutcont} ${isVisible && styles.slideinleft}`}>
-      <h2 className={styles.headertext}>ABOUT</h2>
+      <h1 className={styles.headertext}>ABOUT</h1>
       <div className={styles.row}>
         <img
           alt="Loading..."
@@ -43,11 +43,11 @@ function About() {
               className={styles.skillimg}
             />
             <div className={styles.skilltextcont}>
-              <h1 className={styles.skillheadertext}>Frontend Developer</h1>
-              <h2 className={styles.skilltext}>
+              <p className={styles.skillheadertext}>Frontend Developer</p>
+              <p className={styles.skilltext}>
                 I’m a front-end developer with experience in building responsive
                 and optimized sites
-              </h2>
+              </p>
             </div>
           </div>
           <div className={styles.skillbox}>
@@ -57,11 +57,11 @@ function About() {
               className={styles.skillimg}
             />
             <div className={styles.skilltextcont}>
-              <h1 className={styles.skillheadertext}>Backend Developer</h1>
-              <h2 className={styles.skilltext}>
+              <p className={styles.skillheadertext}>Backend Developer</p>
+              <p className={styles.skilltext}>
                 I have experience developing fast and optimised back-end systems
                 and APIs
-              </h2>
+              </p>
             </div>
           </div>
           <div className={styles.skillbox}>
@@ -71,11 +71,11 @@ function About() {
               className={styles.skillimg}
             />
             <div className={styles.skilltextcont}>
-              <h1 className={styles.skillheadertext}>UI Designer</h1>
-              <h2 className={styles.skilltext}>
+              <p className={styles.skillheadertext}>UI Designer</p>
+              <p className={styles.skilltext}>
                 I have designed multiple landing pages and have created design
                 systems as well
-              </h2>
+              </p>
             </div>
           </div>
         </div>

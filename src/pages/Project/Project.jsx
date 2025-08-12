@@ -55,7 +55,7 @@ function Project() {
 
   return (
     <div id="project" ref={projectRef} className={`${styles.projectcont} ${isVisible && styles.slideinleft}`}>
-      <h2 className={styles.headertext}>PROJECTS</h2>
+      <h1 className={styles.headertext}>PROJECTS</h1>
       <div className={styles.projectdiv}>
         {projectData.map((item) => {
           return (
@@ -66,12 +66,12 @@ function Project() {
                 className={styles.projectimg}
               />
               <div className={styles.projectdesc}>
-                <h2 className={styles.projectname}>{item?.title}</h2>
-                <h3 className={styles.projectdesctext}>{item?.description}</h3>
+                <p className={styles.projectname}>{item?.title}</p>
+                <p className={styles.projectdesctext}>{item?.description}</p>
                 <div className={styles.skillcont}>
                   {item.skill.map((skill, index) => (
                     <div className={styles.skillbox} key={index}>
-                      <h4 className={styles.skilltext}>{skill}</h4>
+                      <p className={styles.skilltext}>{skill}</p>
                     </div>
                   ))}
                 </div>

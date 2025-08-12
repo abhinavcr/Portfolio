@@ -57,7 +57,7 @@ function Experience() {
       ref={experienceRef}
       className={`${styles.experienceCont} ${isVisible && styles.slideinright}`}
     >
-      <h2 className={styles.headertext}>EXPERIENCE</h2>
+      <h1 className={styles.headertext}>EXPERIENCE</h1>
       <div className={styles.row}>
         <div className={styles.skilliconcont}>
           {skillData.map((item) => {
@@ -70,7 +70,7 @@ function Experience() {
                     className={styles.skillimg}
                   />
                 </div>
-                <h3 className={styles.skilltext}>{item?.skillname}</h3>
+                <p className={styles.skilltext}>{item?.skillname}</p>
               </div>
             );
           })}
@@ -85,15 +85,15 @@ function Experience() {
                   className={styles.companyimg}
                 />
                 <div className={styles.companydes}>
-                  <h2 className={styles.companyname}>
+                  <p className={styles.companyname}>
                     {item?.companyname}, {item?.position}
-                  </h2>
-                  <h4 className={styles.companyduration}>{item?.duration}</h4>
+                  </p>
+                  <p className={styles.companyduration}>{item?.duration}</p>
                   {item?.description?.map((desc, index) => (
                     <ul>
-                      <h3 className={styles.workdesc} key={index}>
+                      <p className={styles.workdesc} key={index}>
                         {desc}
-                      </h3>
+                      </p>
                     </ul>
                   ))}
                 </div>

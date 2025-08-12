@@ -126,7 +126,7 @@ function Contactus() {
               src={Images.mail}
               className={styles.socialimg}
             />
-            <h4 className={styles.socialtext}>jhaabhinav736@gmail.com</h4>
+            <p className={styles.socialtext}>jhaabhinav736@gmail.com</p>
           </a>
           <a
             onClick={() =>
@@ -139,7 +139,7 @@ function Contactus() {
               src={Images.githublogo}
               className={styles.socialimg}
             />
-            <h4 className={styles.socialtext}>https://github.com/abhinavcr</h4>
+            <p className={styles.socialtext}>https://github.com/abhinavcr</p>
           </a>
           <a
             onClick={() =>
@@ -153,7 +153,7 @@ function Contactus() {
               src={Images.linkdinlogo}
               className={styles.socialimg}
             />
-            <h4 className={styles.socialtext}>Abhinav Jha</h4>
+            <p className={styles.socialtext}>Abhinav Jha</p>
           </a>
         </div>
       </div>
